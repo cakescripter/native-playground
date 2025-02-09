@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, StyleSheet, View, Button } from "react-native";
+import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const name = "Ewa"
   return (
     <View>
@@ -9,7 +9,11 @@ const HomeScreen = () => {
       <Text style={styles.textStyle2}>My name is {name}</Text>
       <Button 
         title="Go to Components Demo"
-        onPress={() => console.log('Button pressed')} />
+        onPress={() => navigation.navigate('Components') } />
+      <Button title="Go to List Demo" onPress={() => navigation.navigate('List')} />
+      <TouchableOpacity onPress={() => navigation.navigate('List')}>
+        <Text>Go to List Demo</Text>
+      </TouchableOpacity>
     </View>
   );
 };
