@@ -7,13 +7,15 @@ const HomeScreen = ({ navigation }) => {
     <View>
       <Text style={styles.textStyle}>Getting started with react native!</Text>
       <Text style={styles.textStyle2}>My name is {name}</Text>
-      <Button 
-        title="Go to Components Demo"
-        onPress={() => navigation.navigate('Components') } />
+      <Button title="Go to Components Demo" onPress={() => navigation.navigate('Components') } />
       <Button title="Go to List Demo" onPress={() => navigation.navigate('List')} />
+
       <TouchableOpacity onPress={() => navigation.navigate('List')}>
         <Text>Go to List Demo</Text>
       </TouchableOpacity>
+
+      <Button title="Go to Images Demo" onPress={() => navigation.navigate('Image')} />
+
     </View>
   );
 };
