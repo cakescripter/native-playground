@@ -10,7 +10,7 @@ const ColorScreen = () => {
                 setColors([...colors, randomRgb()]);
             }}/>
             <FlatList
-            horizontal
+            // horizontal
             keyExtractor={(item) => item}
             data={colors}
             renderItem={({ item }) => {
